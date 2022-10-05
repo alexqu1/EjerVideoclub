@@ -2,6 +2,6 @@
 $host="localhost";
 $usuario="root";
 $clave="";
-$base="videoclub";
+$base="videoclub1";
 $conexion=mysqli_connect($host, $usuario, $clave, $base);
 ?>
