@@ -5,7 +5,7 @@ include_once 'arrayuser.php';
 
 //Comprobamos la llamada a index, después de enviar datos por el formulario
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nombre = $_POST['nombre'];
+    $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
 
 //Creamos una variable para verificar si el usuario con ese nombre y contraseña existe. 
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 //Buscamos en el array, si el usuario y contraseña se encuentra la variable $existe se pone a true y rompe el bucle para no seguir buscando. 
     foreach ($usuarios as $item) {
-        if ($nombre == $item['nombre'] and  $contrasena == $item['contrasena']) {
+        if ($usuario == $item['usuario'] and  $contrasena == $item['contrasena']) {
             $existe = true;
             break;
         }
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     <form action="index.php" method="post">
     <label for="">Usuario</label>
-    <input type="text" name="nombre" id="">
+    <input type="text" name="usuario" id="">
     <label for="">contraseña</label>
     <input type="text" name="contrasena" id="">
 
