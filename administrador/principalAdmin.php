@@ -1,3 +1,11 @@
+
+
+<?php
+
+include_once ("../includes/ListadoClientes.php")
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,5 +16,14 @@
 </head>
 <body>
     <h1>BIENVENIDO :admnistrrador </h1>
+
+ 
+    <?php
+
+ListarClientes()
+
+?>
+
+
 </body>
 </html>
