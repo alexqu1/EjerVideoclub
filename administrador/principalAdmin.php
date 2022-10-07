@@ -2,7 +2,7 @@
 
 <?php
 
-include_once ("../includes/ListadoClientes.php")
+
 
 ?>
 
@@ -16,13 +16,7 @@ include_once ("../includes/ListadoClientes.php")
 </head>
 <body>
     <h1>BIENVENIDO :admnistrrador </h1>
-
  
-    <?php
-
-ListarClientes()
-
-?>
 
 
 </body>
