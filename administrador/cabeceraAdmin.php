@@ -1,4 +1,10 @@
 
+<?php
+include_once ("../includes/ComprobarLogin.php");
+
+$usuario = $_SESSION['usuario'];
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,8 +24,20 @@
 <button> <a href="mostrarclientes.php">Listar Clientes</a> </button>
 <button> <a href="mostrarPeliculas.php">Listar Peliculas</a> </button>
 <button> <a href="RegistroPeliculas.php">Registro Peliculas</a> </button>
-<button> <a href="../includes/cerrarsesion.php">Cerrar Sesiones</a> </button>
+
 </aside>
+
+<div>
+    <p>
+        BIENVENIDO :  
+        <?php
+           echo $usuario;
+        ?>
+    <button> <a href="../includes/cerrarsesion.php">Cerrar Sesiones</a> </button>
+    </p>
+
+</div>
+
 </header>
   
 

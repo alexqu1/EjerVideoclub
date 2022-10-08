@@ -2,7 +2,7 @@
 
 <?php
 
-
+include_once ("../includes/ComprobarLogin.php");
 include_once ("cabeceraAdmin.php");
 ?>
 
