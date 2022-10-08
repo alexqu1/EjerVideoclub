@@ -2,7 +2,7 @@
 
 <?php
 
-function ListarPelicula()
+function ListarPeliculas()
 {
 
 include ("../conexion.php");

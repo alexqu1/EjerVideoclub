@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
 <button> <a href="mostrarclientes.php">Listar Clientes</a> </button>
 <button> <a href="mostrarPeliculas.php">Listar Peliculas</a> </button>
 <button> <a href="RegistroPeliculas.php">Registro Peliculas</a> </button>
-
+<button> <a href="../includes/cerrarsesion.php">Cerrar Sesiones</a> </button>
 </aside>
 </header>
   

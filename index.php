@@ -21,8 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 //Comprueba si existe es true. En ese caso se crean las variables de sesión logueado y nombre y se abre la página usuario.php ya con las variables de sesión creadas
     if ($existe) {
-
-        if ($nombre === "admin" and $contrasena==="1234"   ) {
+        $_SESSION['logueado'] = true;
+        $_SESSION['usuario'] = $usuario;
+        if ($usuario === "admin" and $contrasena==="1234"   ) {
             header('Location: administrador/principalAdmin.php');
           
         }else{
