@@ -6,7 +6,8 @@ function ListarClientes()
 {
   
 
-  include ("../conexion.php");
+  $root = realpath($_SERVER["DOCUMENT_ROOT"]) . "/ejervideoclub-1/";
+  include ($root . "conexion.php");
   $consulta="select * from usuarios";
   $paquete=mysqli_query($conexion, $consulta);
   

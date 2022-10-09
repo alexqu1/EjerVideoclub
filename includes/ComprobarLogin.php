@@ -1,12 +1,45 @@
-
 <?php
+//Se crea la sesión
 session_start();
-if (isset($_SESSION['logueado']) and $_SESSION['logueado']) {
-    $usuario = $_SESSION['usuario'];
-} else {
-//Si el usuario no está logueado redireccionamos al login. 
-    header('Location: error.html');
+include_once '../arrayuser.php';
 
+//Comprobamos la llamada a index, después de enviar datos por el formulario
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $usuario = $_POST['usuario'];
+    $contrasena = $_POST['contrasena'];
+
+//Creamos una variable para verificar si el usuario con ese nombre y contraseña existe. 
+    $existe = false;
+
+//Buscamos en el array, si el usuario y contraseña se encuentra la variable $existe se pone a true y rompe el bucle para no seguir buscando. 
+    foreach ($usuarios as $item) {
+        if ($usuario == $item['usuario'] and  $contrasena == $item['contrasena']) {
+            $existe = true;
+            break;
+        }
+    }
+
+//Comprueba si existe es true. En ese caso se crean las variables de sesión logueado y nombre y se abre la página usuario.php ya con las variables de sesión creadas
+    if ($existe) {
+        $_SESSION['logueado'] = true;
+        $_SESSION['usuario'] = $usuario;
+        if ($usuario === "admin" and $contrasena==="1234"   ) {
+            header('Location: ../administrador/principalAdmin.php');
+          
+        }else{
+            header('Location: ../usuario/principaluser.php');
+        }
+
+        // $_SESSION['logueado'] = true;
+        // $_SESSION['nombre'] = $nombre;
+        // if ($nombre == "toni") {
+        //     include_once 'arrayprod.php';
+        //     $_SESSION['productos'] = $productos;
+        // }
+        // header('Location: usuario/principaluser.php');
+    
+    } else {
+        $error_login = true;
+    }
 }
-
-?>
+?> 

@@ -1,11 +1,12 @@
 
 
+
 <?php
 
 function ListarPeliculas()
 {
-
-include ("../conexion.php");
+  $root = realpath($_SERVER["DOCUMENT_ROOT"]) . "/ejervideoclub-1/";
+  include ($root . "conexion.php");
 $consulta="select * from peliculas";
 $paquete=mysqli_query($conexion, $consulta);
 

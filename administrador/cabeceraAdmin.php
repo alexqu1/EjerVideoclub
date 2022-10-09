@@ -1,6 +1,6 @@
 
 <?php
-include_once ("../includes/ComprobarLogin.php");
+include_once ("../includes/AntiLogin.php");
 
 $usuario = $_SESSION['usuario'];
 ?>

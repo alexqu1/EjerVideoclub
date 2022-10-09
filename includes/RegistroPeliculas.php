@@ -4,7 +4,8 @@
 
 function RegistrarPeliculas(){
 
-    include ("../conexion.php");
+    $root = realpath($_SERVER["DOCUMENT_ROOT"]) . "/ejervideoclub-1/";
+    include ($root . "conexion.php");
     if (!isset($_POST["submit"])){
     echo '<html><body>
     <form method="post" action="RegistroPeliculas.php">
