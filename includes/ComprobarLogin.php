@@ -30,13 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: ../usuario/principaluser.php');
         }
 
-        // $_SESSION['logueado'] = true;
-        // $_SESSION['nombre'] = $nombre;
-        // if ($nombre == "toni") {
-        //     include_once 'arrayprod.php';
-        //     $_SESSION['productos'] = $productos;
-        // }
-        // header('Location: usuario/principaluser.php');
     
     } else {
         $error_login = true;
