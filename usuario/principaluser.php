@@ -1,8 +1,9 @@
 <?php
 session_start();
+$root = realpath($_SERVER["DOCUMENT_ROOT"]) . "/ejervideoclub/";
 
 if (isset($_SESSION['logueado']) and $_SESSION['logueado']) {
-    $nombre = $_SESSION['nombre'];
+    $usuario = $_SESSION['usuario'];
 } else {
 //Si el usuario no está logueado redireccionamos al login. 
     header('Location: index.php');
@@ -20,6 +21,12 @@ if (isset($_SESSION['logueado']) and $_SESSION['logueado']) {
     <title>Document</title>
 </head>
 <body>
-    <h1>BIENVENIDO : <?php echo  $nombre  ?> </h1>
+    <h1>BIENVENIDO : <?php echo  $usuario  ?> </h1>
+    <?php
+  
+  include ($root . "usuario/mostrarPeliculas.php");
+
+  ?>
+
 </body>
 </html>
