@@ -1,5 +1,5 @@
 <?php
-  $root = realpath($_SERVER["DOCUMENT_ROOT"]) . "/ejervideoclub-1/";
+  $root = realpath($_SERVER["DOCUMENT_ROOT"]) . "/ejervideoclub/";
   include ($root . "includes/RegistroClientes.php");
 
   ?>

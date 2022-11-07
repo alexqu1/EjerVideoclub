@@ -6,7 +6,7 @@
 function ListarPeliculas()
 {
 
-  $root = realpath($_SERVER["DOCUMENT_ROOT"]) . "/ejervideoclub-1/";
+  $root = realpath($_SERVER["DOCUMENT_ROOT"]) . "/ejervideoclub/";
   include ($root . "conexion.php");
 
 
